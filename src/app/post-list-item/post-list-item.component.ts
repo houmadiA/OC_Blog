@@ -16,10 +16,20 @@ export class PostListItemComponent implements OnInit {
 
   onLoveIt() {
     this.post.loveIts++;
+    console.log( this.post.loveIts );
   }
 
   onDontLoveIt() {
     this.post.loveIts--;
+    console.log( this.post.loveIts );
+  }
+
+  isLoved() {
+    if (this.post.loveIts > 0) {
+      return true;
+    } else if (this.post.loveIts > 0) {
+      return false;
+    }
   }
 
 }
